@@ -1,0 +1,105 @@
+/* Filter Style */
+.nav{
+    padding: 20px;
+}
+.navigation{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #010101;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+.navigation .menu_icon{
+    position: relative;
+    font-size: 35px;
+    font-family: 800;
+    display: block;
+    transition: all .3s .3s ease-in;
+}
+.navigation.active .menu_icon{
+    display: none;
+}
+.navigation.active{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(49, 49, 49);
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.navigation .els{
+    display: none;
+}
+.navigation.active .els{
+    display: block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation.active .els span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(calc(40px*var(--x)),calc(10px*var(--y)));
+    transition: all .3s .3s ease-in;
+}
+.navigation.active:hover span{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(15, 15, 15);
+}
+.navigation.active .els span:nth-child(1):hover i{
+    filter: drop-shadow(0px 0px 1px red) drop-shadow(0px 0px 3px red) drop-shadow(0px 0px 15px red);
+}
+.navigation.active .els span:hover i{
+    filter: drop-shadow(0px 0px 1px rgb(0, 195, 255)) drop-shadow(0px 0px 3px rgb(0, 195, 255)) drop-shadow(0px 0px 15px rgb(0, 195, 255));
+}
+.navigation.active .els span i{
+position: relative;
+font-size: 26px;
+color: white;
+}
+
+.navigation::before{
+    content: '';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right:  100%;
+    background-color: #020202;
+    border-radius: 5px;
+}
+.navigation.active:hover:before{
+    right:  0;
+    padding: 5px;
+    transition: all .3s .3s ease-in;
+}
+.nav form{
+    position: relative;
+    height: 50px;
+    width: 300px;
+    display: flex;
+}

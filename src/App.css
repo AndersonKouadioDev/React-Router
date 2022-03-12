@@ -1,0 +1,23 @@
+/* ******************** General code ******************** */
+
+:root{
+  --red : rgb(255, 0, 64) ;
+}
+
+.App {
+  box-sizing: border-box;
+}
+
+.person_profile{
+ padding: 20px;
+ border-bottom: 3px solid var(--red);
+}
+.photo_profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info_profile{
+  padding-left: 30px;
+  border-left: 5px solid var(--red);
+}
